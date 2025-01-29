@@ -71,7 +71,7 @@ The automation consists of:
 ## How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/SaaedTUser-Account-Management-Script.git
+   git clone https://github.com/SaaedT/User-Account-Management-Script.git
    ```
 2. Navigate to the project directory:
    ```bash
