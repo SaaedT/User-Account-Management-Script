@@ -29,48 +29,49 @@ The automation consists of:
 ---
 
 ## Project Explanation
+
 1. **User Data Collection**
    - The script `data.sh` prompts for a username and full name.
    - The entered data is stored in `employee.csv`.
    
-   ![Script Execution - data.sh](screenshots/data_script.png)
+   ![Script Execution - data.sh](screenshots/data-script.png)
 
 2. **Processing the CSV File and Creating Users**
    - The script `user.sh` reads `employee.csv` and creates users.
    - A password is assigned to each user, and details are logged in `out.txt`.
    
-   ![Script Execution - user.sh](screenshots/user_script.png)
+   ![Script Execution - user.sh](screenshots/user-script.png)
 
-3. **Verifying Data Entry**
-   - After executing `data.sh`, `employee.csv` contains the collected data.
+3. **Executing the Data Collection Script (`data.sh`)**
+   - Running `data.sh` multiple times for two users (AWS and KBs), followed by viewing `employee.csv` using `cat` to confirm data entry.
    
-   ![CSV File Contents](screenshots/cat_employee_csv.png)
+   ![Executing data.sh](screenshots/execute-data-script.png)
 
-4. **Verifying User Creation**
-   - After running `user.sh`, `out.txt` contains user credentials.
+4. **Executing the User Creation Script (`user.sh`)**
+   - Running `user.sh`, displaying the files, showing `out.txt`, and using `cat` to view the content of `out.txt`.
    
-   ![Output File](screenshots/cat_out_txt.png)
+   ![Executing user.sh](screenshots/execute-user-script.png)
 
 5. **Logging in with Created Users**
-   - User `AWS` logs in successfully.
+   - User `AWS` logs in successfully, as seen in `out.txt` and verified by using `su - AWS`.
    
-   ![Login as AWS](screenshots/login_aws.png)
+   ![Login as AWS](screenshots/login-AWS.png)
    
-   - User `KBs` logs in successfully.
+   - User `KBs` logs in successfully, as seen in `out.txt` and verified by using `su - KBs`.
    
-   ![Login as KBs](screenshots/login_kbs.png)
+   ![Login as KBs](screenshots/login-KBs.png)
 
-6. **Checking System Users**
+6. **Verifying User Creation**
    - The `/etc/passwd` file is inspected to confirm user creation.
    
-   ![System Users](screenshots/etc_passwd.png)
+   ![System Users](screenshots/passwd-file.png)
 
 ---
 
 ## How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/SaaedT/User-Account-Management-Script.git
+   git clone https://github.com/SaaedTUser-Account-Management-Script.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -92,4 +93,3 @@ The automation consists of:
    ```bash
    su - AWS
    ```
-
